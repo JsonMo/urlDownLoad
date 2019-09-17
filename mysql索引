@@ -1,0 +1,10 @@
+1、添加主键索引
+alter table tableName add primarykey ("column")
+2、添加唯一索引
+alter table tablename  add unique ("column")
+3、添加普通索引
+alter talbe tableName add index index_name('column')
+4、添加全文索引
+alter table tableName add FULLTEXT('column')
+5、添加多列索引
+alter table  tableName add index index_name('column1','column2','column3')
