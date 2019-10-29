@@ -1,0 +1,41 @@
+1、安装依赖包
+//一键安装上面四个依赖
+yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
+
+2、下载并解压安装包
+//创建一个文件夹
+cd /usr/local
+mkdir nginx
+cd nginx
+//下载tar包
+wget http://nginx.org/download/nginx-1.13.7.tar.gz
+tar -xvf nginx-1.13.7.tar.gz
+
+3、安装nginx
+//进入nginx目录
+cd /usr/local/nginx
+//执行命令
+./configure
+//执行make命令
+make
+//执行make install命令
+make install
+4.配置nginx.conf
+# 打开配置文件
+vi /usr/local/nginx/conf/nginx.conf
+
+5、启动nginx
+
+ps -ef | grep nginx  --查看是否启动
+
+进入安装目录中，
+
+命令： cd /usr/local/nginx/sbin
+
+启动，关闭，重启，命令：
+
+./nginx 启动
+
+./nginx -s stop 关闭
+
+./nginx -s reload 重启
